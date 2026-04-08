@@ -1,0 +1,16 @@
+class Solution:
+    def hasDuplicate(self, nums: List[int]) -> bool:
+        nums_unique = []
+        for num in nums:
+            if num not in nums_unique:
+                nums_unique.append(num)
+            else:
+                return True
+        return False
+        # nums_dict = {}
+        # for digit in nums:
+        #     if digit not in nums_dict:
+        #         nums_dict[digit] = 1
+        #     else:
+        #         return True
+        # return False
